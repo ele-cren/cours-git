@@ -19,11 +19,10 @@ const searchMovies = () => {
   if (webWorker) {
     const searchInput = document.getElementById('search')
     const search = searchInput ? searchInput.value : ''
-    if (search) {
-      type = 'search'
-      webWorker.postMessage({ type: type, 'search' : search })
-    } else {
-      type = 'top'
+    const oldType = type
+    type = search ? 'search' : 'top'
+    if (type !== oldType) {
+      webWorker.postMessage({ type: type, 'search': search })
     }
   }
 }
