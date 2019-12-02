@@ -30,7 +30,7 @@ const searchMovies = () => {
 
 const getTopMovies = () => {
   if (webWorker) {
-    webWorker.postMessage({ type: 'top' })
+    webWorker.postMessage({ type: type })
   }
 }
 
