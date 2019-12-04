@@ -11,7 +11,7 @@ document.getElementById('search-form').addEventListener('submit', (e) => {
 })
 
 if (window.Worker) {
-  webWorker = new Worker('/js/worker.js') //WARNING : path to change
+  webWorker = new Worker('./js/worker.js') //WARNING : path to change
   webWorker.onmessage = (event) => {
     movies = type === 'top' ? event.data.movies : event.data.movies['Search']
     displayMovies()
