@@ -10,12 +10,11 @@
 </head>
 
 <body>
-<div class="search-container">
-  <label for="movies">Search a movie :</label>
-  <input type="search" id="search" name="search"
+<form id="search-form" class="search-container">
+  <input class="search-input" placeholder="Harry Potter" type="search" id="search" name="search"
          aria-label="Search through site content">
-  <button onclick="searchMovies()">Search</button>
-</div>
+  <input type="submit" value="Search" class="search-btn" />
+</form>
 <div id="card-container"></div>
   <script src="/js/index.js"></script>
 </body>

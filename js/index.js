@@ -5,6 +5,11 @@ let movies = []
 let type = 'top'
 let webWorker
 
+document.getElementById('search-form').addEventListener('submit', (e) => {
+  e.preventDefault()
+  searchMovies()
+})
+
 if (window.Worker) {
   webWorker = new Worker('/js/worker.js') //WARNING : path to change
   webWorker.onmessage = (event) => {
@@ -19,7 +24,6 @@ const searchMovies = () => {
   if (webWorker) {
     const searchInput = document.getElementById('search')
     const search = searchInput ? searchInput.value : ''
-    console.log('search')
     const oldType = type
     type = search ? 'search' : 'top'
     if (type !== oldType) {
@@ -53,6 +57,7 @@ const displayMovies = () => {
 
     let title = document.createElement('h5');
     title.innerText = movie['Title'];
+    title.title = movie['Title']
     title.className = 'card-title';
 
     cardBody.appendChild(title);
