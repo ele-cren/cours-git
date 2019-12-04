@@ -12,7 +12,7 @@ if (window.Worker) {
     console.log(type === 'top' ? movies : movies['Search'])
   }
 } else {
-  // Not supported by browser
+  console.log("Not supported by browser")
 }
 
 const searchMovies = () => {
@@ -34,3 +34,27 @@ const getTopMovies = () => {
 }
 
 getTopMovies()
+
+//Card Movie Display
+
+let cardContainer = document.getElementById('card-container')
+
+for(let movie of movies){
+  let card = document.createElement('card')
+
+  let img = document.createElement('img');
+  img.src = movie.poster
+  img.alt = '#'
+  img.className = 'card-img-top'
+
+  let cardBody = document.createElement('card-body');
+
+  let title = document.createElement('h5');
+  title.innerText = movie.title;
+  title.className = 'card-title';
+
+  cardBody.appendChild(title);
+  card.appendChild(cardBody);
+  card.appendChild(img);
+  cardContainer.appendChild(card);
+}
