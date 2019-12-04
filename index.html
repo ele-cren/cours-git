@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="/styles/style.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Films</title>
 </head>
@@ -12,12 +12,12 @@
 <body>
 <div class="search-container">
   <label for="movies">Search a movie :</label>
-  <input type="search" id="movies" name="search"
+  <input type="search" id="search" name="search"
          aria-label="Search through site content">
-  <button>Search</button>
+  <button onclick="searchMovies()">Search</button>
 </div>
-<div class="card-container"></div>
-  <script src="./js/index.js"></script>
+<div id="card-container"></div>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>

@@ -6,10 +6,10 @@ let type = 'top'
 let webWorker
 
 if (window.Worker) {
-  webWorker = new Worker('/cours-git/js/worker.js') //WARNING : path to change
+  webWorker = new Worker('/js/worker.js') //WARNING : path to change
   webWorker.onmessage = (event) => {
-    movies = event.data.movies
-    console.log(type === 'top' ? movies : movies['Search'])
+    movies = type === 'top' ? event.data.movies : event.data.movies['Search']
+    displayMovies()
   }
 } else {
   console.log("Not supported by browser")
@@ -19,6 +19,7 @@ const searchMovies = () => {
   if (webWorker) {
     const searchInput = document.getElementById('search')
     const search = searchInput ? searchInput.value : ''
+    console.log('search')
     const oldType = type
     type = search ? 'search' : 'top'
     if (type !== oldType) {
@@ -33,37 +34,32 @@ const getTopMovies = () => {
   }
 }
 
-getTopMovies()
-
 //Card Movie Display
 
-let cardContainer = document.getElementById('card-container')
-
 const displayMovies = () => {
-  if(type === 'top'){
-    for(let movie of movies){
-      let card = document.createElement('card')
+  let cardContainer = document.getElementById('card-container')
+  cardContainer.textContent = ''
+  for(let movie of movies){
+    let card = document.createElement('div')
+    card.className = 'card'
 
-      let img = document.createElement('img');
-      img.src = movie['Poster']
-      img.alt = movie['Poster']
-      img.className = 'card-img-top'
+    let img = document.createElement('img');
+    img.src = movie['Poster']
+    img.alt = movie['Poster']
+    img.className = 'card-img-top'
 
-      let cardBody = document.createElement('card-body');
+    let cardBody = document.createElement('div');
+    cardBody.className = 'card-body'
 
-      let title = document.createElement('h5');
-      title.innerText = movie['Title'];
-      title.className = 'card-title';
+    let title = document.createElement('h5');
+    title.innerText = movie['Title'];
+    title.className = 'card-title';
 
-      cardBody.appendChild(title);
-      card.appendChild(cardBody);
-      card.appendChild(img);
-      cardContainer.appendChild(card);
-    }
-  } else {
-    //movies['Search']
+    cardBody.appendChild(title);
+    card.appendChild(cardBody);
+    card.appendChild(img);
+    cardContainer.appendChild(card);
   }
 }
 
-displayMovies()
-
+getTopMovies()
