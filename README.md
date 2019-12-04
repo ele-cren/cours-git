@@ -1,6 +1,6 @@
 # Films 
 
-Ce projet a pour vocation de récupérer les données de l'API OMDb pour afficher une liste de données liée à un film. 
+Ce projet a pour vocation de récupérer une liste de films, selon une recherche ou une liste prédéfinie, et d'afficher leur poster ainsi que leur titre.
 
 ## Contraintes techniques 
 
