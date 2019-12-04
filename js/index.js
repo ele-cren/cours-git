@@ -6,7 +6,7 @@ let type = 'top'
 let webWorker
 
 if (window.Worker) {
-  webWorker = new Worker('/js/worker.js')
+  webWorker = new Worker('/cours-git/js/worker.js') //WARNING : path to change
   webWorker.onmessage = (event) => {
     movies = event.data.movies
     console.log(type === 'top' ? movies : movies['Search'])
@@ -39,22 +39,31 @@ getTopMovies()
 
 let cardContainer = document.getElementById('card-container')
 
-for(let movie of movies){
-  let card = document.createElement('card')
+const displayMovies = () => {
+  if(type === 'top'){
+    for(let movie of movies){
+      let card = document.createElement('card')
 
-  let img = document.createElement('img');
-  img.src = movie.poster
-  img.alt = '#'
-  img.className = 'card-img-top'
+      let img = document.createElement('img');
+      img.src = movie['Poster']
+      img.alt = movie['Poster']
+      img.className = 'card-img-top'
 
-  let cardBody = document.createElement('card-body');
+      let cardBody = document.createElement('card-body');
 
-  let title = document.createElement('h5');
-  title.innerText = movie.title;
-  title.className = 'card-title';
+      let title = document.createElement('h5');
+      title.innerText = movie['Title'];
+      title.className = 'card-title';
 
-  cardBody.appendChild(title);
-  card.appendChild(cardBody);
-  card.appendChild(img);
-  cardContainer.appendChild(card);
+      cardBody.appendChild(title);
+      card.appendChild(cardBody);
+      card.appendChild(img);
+      cardContainer.appendChild(card);
+    }
+  } else {
+    //movies['Search']
+  }
 }
+
+displayMovies()
+
