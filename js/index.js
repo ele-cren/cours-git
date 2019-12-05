@@ -60,9 +60,18 @@ const displayMovies = () => {
       detailsLink.href = './details.html'
       const detailsBtn = document.createElement('button')
       detailsBtn.innerText = 'More infos'
+      console.log(movie)
       detailsBtn.onclick = function () {
-        console.log(movie)
-        window.localStorage.setItem('movieItem', movie)
+        window.localStorage.setItem('movieTitle', movie.Title)
+        window.localStorage.setItem('moviePoster', movie.Poster)
+        window.localStorage.setItem('movieYear', movie.Year)
+        window.localStorage.setItem('movieRuntime', movie.Runtime)
+        window.localStorage.setItem('movieGenre', movie.Genre)
+        window.localStorage.setItem('movieCountry', movie.Country)
+        window.localStorage.setItem('movieDirector', movie.Director)
+        window.localStorage.setItem('movieActors', movie.Actors)
+        window.localStorage.setItem('movieLanguage', movie.Language)
+        window.localStorage.setItem('moviePlot', movie.Plot)
       }
       detailsBtn.className = 'card-btn'
 

@@ -88,3 +88,15 @@ h5 {
 .card-btn:hover {
   background-color: #2969c9;
 }
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
