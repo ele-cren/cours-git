@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3334825-7020-49e5-897e-09461e286cbf" name="Default Changelist" comment="presence matin dilys">
+    <list default="true" id="b3334825-7020-49e5-897e-09461e286cbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +17,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -67,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575533339889</updated>
       <workItem from="1575533348692" duration="335000" />
-      <workItem from="1575543651619" duration="6876000" />
+      <workItem from="1575543651619" duration="12547000" />
     </task>
     <task id="LOCAL-00001" summary="presence matin dilys">
       <created>1575533479009</created>
@@ -76,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575533479009</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="send movie object">
+      <created>1575554767434</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575554767434</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,13 +106,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="presence matin dilys" />
-    <option name="LAST_COMMIT_MESSAGE" value="presence matin dilys" />
+    <MESSAGE value="send movie object" />
+    <option name="LAST_COMMIT_MESSAGE" value="send movie object" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1575554695701">
+    <state x="432" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575560577909">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575554695700" />
+    <state x="432" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1575560577909" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1575560450979">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575560450979" />
     <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1575543795220">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -111,22 +138,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="53" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575533666382" />
-    <state x="395" y="78" key="MultipleFileMergeDialog" timestamp="1575533666397">
+    <state x="395" y="78" key="MultipleFileMergeDialog" timestamp="1575560515753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="395" y="78" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575533666397" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1575554752032">
+    <state x="395" y="78" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575560515753" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1575560538811">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1575554752032" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1575560538811" />
     <state x="471" y="154" key="git4idea.merge.GitMergeDialog" timestamp="1575533622892">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="471" y="154" key="git4idea.merge.GitMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575533622892" />
-    <state x="413" y="154" key="git4idea.merge.GitPullDialog" timestamp="1575548709820">
+    <state x="413" y="154" key="git4idea.merge.GitPullDialog" timestamp="1575560503836">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="154" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1575548709820" />
+    <state x="413" y="154" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1575560503836" />
     <state x="480" y="257" key="git4idea.ui.GitResetDialog" timestamp="1575533608108">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
