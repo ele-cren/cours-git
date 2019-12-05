@@ -60,6 +60,10 @@ const displayMovies = () => {
       detailsLink.href = './details.html'
       const detailsBtn = document.createElement('button')
       detailsBtn.innerText = 'More infos'
+      detailsBtn.onclick = function () {
+        console.log(movie)
+        window.localStorage.setItem('movieItem', movie)
+      }
       detailsBtn.className = 'card-btn'
 
       detailsLink.appendChild(detailsBtn)
