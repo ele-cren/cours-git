@@ -4,6 +4,11 @@
 let movies = []
 let type = 'top'
 let webWorker
+const pages = {
+  minPage: 1,
+  currentPage: 1,
+  maxPage: 1
+}
 
 document.getElementById('search-form').addEventListener('submit', (e) => {
   e.preventDefault()
@@ -14,6 +19,10 @@ if (window.Worker) {
   webWorker = new window.Worker('./js/worker.js') // WARNING : path to change
   webWorker.onmessage = (event) => {
     movies = type === 'top' ? event.data.movies : event.data.movies.Search
+    const totalResults = event.data.movies.totalResults
+    console.log(event.data.movies)
+    pages.maxPage = totalResults ? Math.ceil(totalResults / 10) : 1
+    console.log('Total : ' + totalResults + ' vs pages : ' + pages.maxPage)
     displayMovies()
   }
 } else {
@@ -27,7 +36,7 @@ const searchMovies = () => {
     const oldType = type
     type = search ? 'search' : 'top'
     if ((type !== oldType) || type === 'search') {
-      webWorker.postMessage({ type: type, search: search })
+      webWorker.postMessage({ type: type, search: search, page: pages.currentPage })
     }
   }
 }
