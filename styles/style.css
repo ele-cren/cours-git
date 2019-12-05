@@ -71,6 +71,23 @@ h5 {
   height: 250px;
 }
 
+.card-btn {
+  width: 100%;
+  max-width: 200px;
+  height: 30px;
+  margin: 10px auto auto auto;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-color: #4e86da;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.card-btn:hover {
+  background-color: #2969c9;
+
 #btn-container {
   margin-top: 10px;
   display: flex;
