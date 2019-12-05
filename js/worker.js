@@ -1,5 +1,5 @@
 /* eslint-env worker */
-const URL = 'https://www.omdbapi.com/'
+const URL = 'http://www.omdbapi.com/'
 const API_KEY = 'da057664'
 
 const baseMovies = [
