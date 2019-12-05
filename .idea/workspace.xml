@@ -110,10 +110,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="send movie object" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1575554765679">
+    <state x="432" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575560577909">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575554765679" />
+    <state x="432" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1575560577909" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1575560450979">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575560450979" />
     <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1575543795220">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -134,22 +138,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="53" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575533666382" />
-    <state x="395" y="78" key="MultipleFileMergeDialog" timestamp="1575533666397">
+    <state x="395" y="78" key="MultipleFileMergeDialog" timestamp="1575560515753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="395" y="78" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575533666397" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1575554778538">
+    <state x="395" y="78" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575560515753" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1575560538811">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1575554778538" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1575560538811" />
     <state x="471" y="154" key="git4idea.merge.GitMergeDialog" timestamp="1575533622892">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="471" y="154" key="git4idea.merge.GitMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575533622892" />
-    <state x="413" y="154" key="git4idea.merge.GitPullDialog" timestamp="1575548709820">
+    <state x="413" y="154" key="git4idea.merge.GitPullDialog" timestamp="1575560503836">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="154" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1575548709820" />
+    <state x="413" y="154" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1575560503836" />
     <state x="480" y="257" key="git4idea.ui.GitResetDialog" timestamp="1575533608108">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
