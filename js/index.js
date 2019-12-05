@@ -6,7 +6,7 @@ let type = 'top'
 let webWorker
 const pages = {
   minPage: 1,
-  currentPage: 1,
+  currentPage: 3,
   maxPage: 1
 }
 
@@ -22,7 +22,6 @@ if (window.Worker) {
     const totalResults = event.data.movies.totalResults
     console.log(event.data.movies)
     pages.maxPage = totalResults ? Math.ceil(totalResults / 10) : 1
-    console.log('Total : ' + totalResults + ' vs pages : ' + pages.maxPage)
     displayMovies()
   }
 } else {
@@ -56,8 +55,8 @@ const displayMovies = () => {
       const card = document.createElement('div')
       card.className = 'card'
       const img = document.createElement('img')
-      img.src = movie.Poster
-      img.alt = movie.Poster
+      img.src = movie.Poster !== 'N/A' ? movie.Poster : 'http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png'
+      img.alt = movie.Poster !== 'N/A' ? movie.Poster : 'http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png'
       img.className = 'card-img-top'
       const cardBody = document.createElement('div')
       cardBody.className = 'card-body'

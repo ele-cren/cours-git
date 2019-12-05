@@ -19,13 +19,13 @@ onmessage = (event) => {
   if (event.data.type === 'top') {
     getTopRatedMovies()
   } else if (event.data.type === 'search') {
-    searchMovies(event.data.search)
+    searchMovies(event.data.search, event.data.page)
   }
 }
 
-const searchMovies = async (search) => {
+const searchMovies = async (search, page) => {
   let movies = []
-  const response = await fetch(URL + '?apikey=' + API_KEY + '&s=' + search)
+  const response = await fetch(URL + '?apikey=' + API_KEY + '&s=' + search + '&page=' + page)
   const data = await response.json()
   movies = [...movies, data]
   postMessage({ movies: movies[0] })
