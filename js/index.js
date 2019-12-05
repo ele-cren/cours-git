@@ -26,7 +26,7 @@ const searchMovies = () => {
     const search = searchInput ? searchInput.value : ''
     const oldType = type
     type = search ? 'search' : 'top'
-    if (type !== oldType) {
+    if ((type !== oldType) || type === 'search') {
       webWorker.postMessage({ type: type, 'search': search })
     }
   }
@@ -43,27 +43,32 @@ const getTopMovies = () => {
 const displayMovies = () => {
   let cardContainer = document.getElementById('card-container')
   cardContainer.textContent = ''
-  for(let movie of movies){
-    let card = document.createElement('div')
-    card.className = 'card'
-
-    let img = document.createElement('img');
-    img.src = movie['Poster']
-    img.alt = movie['Poster']
-    img.className = 'card-img-top'
-
-    let cardBody = document.createElement('div');
-    cardBody.className = 'card-body'
-
-    let title = document.createElement('h5');
-    title.innerText = movie['Title'];
-    title.title = movie['Title']
-    title.className = 'card-title';
-
-    cardBody.appendChild(title);
-    card.appendChild(cardBody);
-    card.appendChild(img);
-    cardContainer.appendChild(card);
+  if (movies) {
+    for(let movie of movies){
+      let card = document.createElement('div')
+      card.className = 'card'
+  
+      let img = document.createElement('img');
+      img.src = movie['Poster']
+      img.alt = movie['Poster']
+      img.className = 'card-img-top'
+  
+      let cardBody = document.createElement('div');
+      cardBody.className = 'card-body'
+  
+      let title = document.createElement('h5');
+      title.innerText = movie['Title'];
+      title.title = movie['Title']
+      title.className = 'card-title';
+  
+      cardBody.appendChild(title);
+      card.appendChild(cardBody);
+      card.appendChild(img);
+      cardContainer.appendChild(card);
+    }
+  } else {
+    type = 'top'
+    getTopMovies()
   }
 }
 
