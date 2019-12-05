@@ -105,9 +105,30 @@ const displayMovies = () => {
       title.innerText = movie.Title
       title.title = movie.Title
       title.className = 'card-title'
+      const detailsLink = document.createElement('a')
+      detailsLink.href = './details.html'
+      const detailsBtn = document.createElement('button')
+      detailsBtn.innerText = 'More infos'
+      console.log(movie)
+      detailsBtn.onclick = function () {
+        window.localStorage.setItem('movieTitle', movie.Title)
+        window.localStorage.setItem('moviePoster', movie.Poster)
+        window.localStorage.setItem('movieYear', movie.Year)
+        window.localStorage.setItem('movieRuntime', movie.Runtime)
+        window.localStorage.setItem('movieGenre', movie.Genre)
+        window.localStorage.setItem('movieCountry', movie.Country)
+        window.localStorage.setItem('movieDirector', movie.Director)
+        window.localStorage.setItem('movieActors', movie.Actors)
+        window.localStorage.setItem('movieLanguage', movie.Language)
+        window.localStorage.setItem('moviePlot', movie.Plot)
+      }
+      detailsBtn.className = 'card-btn'
+
+      detailsLink.appendChild(detailsBtn)
       cardBody.appendChild(title)
       card.appendChild(cardBody)
       card.appendChild(img)
+      card.appendChild(detailsLink)
       cardContainer.appendChild(card)
     }
   } else {
