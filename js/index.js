@@ -56,9 +56,17 @@ const displayMovies = () => {
       title.innerText = movie.Title
       title.title = movie.Title
       title.className = 'card-title'
+      const detailsLink = document.createElement('a')
+      detailsLink.href = './details.html'
+      const detailsBtn = document.createElement('button')
+      detailsBtn.innerText = 'More infos'
+      detailsBtn.className = 'card-btn'
+
+      detailsLink.appendChild(detailsBtn)
       cardBody.appendChild(title)
       card.appendChild(cardBody)
       card.appendChild(img)
+      card.appendChild(detailsLink)
       cardContainer.appendChild(card)
     }
   } else {
