@@ -11,13 +11,13 @@ document.getElementById('search-form').addEventListener('submit', (e) => {
 })
 
 if (window.Worker) {
-  webWorker = new Worker('./js/worker.js') //WARNING : path to change
+  webWorker = new window.Worker('./js/worker.js') // WARNING : path to change
   webWorker.onmessage = (event) => {
-    movies = type === 'top' ? event.data.movies : event.data.movies['Search']
+    movies = type === 'top' ? event.data.movies : event.data.movies.Search
     displayMovies()
   }
 } else {
-  console.log("Not supported by browser")
+  console.log('Not supported by browser')
 }
 
 const searchMovies = () => {
@@ -27,7 +27,7 @@ const searchMovies = () => {
     const oldType = type
     type = search ? 'search' : 'top'
     if ((type !== oldType) || type === 'search') {
-      webWorker.postMessage({ type: type, 'search': search })
+      webWorker.postMessage({ type: type, search: search })
     }
   }
 }
@@ -38,33 +38,28 @@ const getTopMovies = () => {
   }
 }
 
-//Card Movie Display
-
+// Card Movie Display
 const displayMovies = () => {
-  let cardContainer = document.getElementById('card-container')
+  const cardContainer = document.getElementById('card-container')
   cardContainer.textContent = ''
   if (movies) {
-    for(let movie of movies){
-      let card = document.createElement('div')
+    for (const movie of movies) {
+      const card = document.createElement('div')
       card.className = 'card'
-  
-      let img = document.createElement('img');
-      img.src = movie['Poster']
-      img.alt = movie['Poster']
+      const img = document.createElement('img')
+      img.src = movie.Poster
+      img.alt = movie.Poster
       img.className = 'card-img-top'
-  
-      let cardBody = document.createElement('div');
+      const cardBody = document.createElement('div')
       cardBody.className = 'card-body'
-  
-      let title = document.createElement('h5');
-      title.innerText = movie['Title'];
-      title.title = movie['Title']
-      title.className = 'card-title';
-  
-      cardBody.appendChild(title);
-      card.appendChild(cardBody);
-      card.appendChild(img);
-      cardContainer.appendChild(card);
+      const title = document.createElement('h5')
+      title.innerText = movie.Title
+      title.title = movie.Title
+      title.className = 'card-title'
+      cardBody.appendChild(title)
+      card.appendChild(cardBody)
+      card.appendChild(img)
+      cardContainer.appendChild(card)
     }
   } else {
     type = 'top'

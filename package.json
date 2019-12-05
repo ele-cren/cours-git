@@ -1,0 +1,23 @@
+{
+  "name": "cours-git",
+  "version": "1.0.0",
+  "description": "Ce projet a pour vocation de récupérer une liste de films, selon une recherche ou une liste prédéfinie, et d'afficher leur poster ainsi que leur titre.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ele-cren/cours-git.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ele-cren/cours-git/issues"
+  },
+  "homepage": "https://github.com/ele-cren/cours-git#readme",
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
+}

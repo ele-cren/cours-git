@@ -1,3 +1,4 @@
+/* eslint-env worker */
 const URL = 'http://www.omdbapi.com/'
 const API_KEY = 'da057664'
 
@@ -24,7 +25,7 @@ onmessage = (event) => {
 
 const searchMovies = async (search) => {
   let movies = []
-  const response = await fetch(URL  + '?apikey=' + API_KEY + '&s=' + search)
+  const response = await fetch(URL + '?apikey=' + API_KEY + '&s=' + search)
   const data = await response.json()
   movies = [...movies, data]
   postMessage({ movies: movies[0] })
@@ -33,7 +34,7 @@ const searchMovies = async (search) => {
 const getTopRatedMovies = async () => {
   let movies = []
   for (let i = 0; i < baseMovies.length; i++) {
-    const response = await fetch(URL  + '?apikey=' + API_KEY + '&t=' + baseMovies[i])
+    const response = await fetch(URL + '?apikey=' + API_KEY + '&t=' + baseMovies[i])
     const data = await response.json()
     movies = [...movies, data]
   }
