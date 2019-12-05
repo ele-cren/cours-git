@@ -74,7 +74,7 @@ const searchMovies = () => {
     pages.currentPage = currentSearch !== searchInput.value ? 1 : pages.currentPage
     currentSearch = searchInput ? searchInput.value : currentSearch
     const oldType = type
-    type = search ? 'search' : 'top'
+    type = currentSearch ? 'search' : 'top'
     if ((type !== oldType) || type === 'search') {
       webWorker.postMessage({ type: type, search: currentSearch, page: pages.currentPage })
     }
