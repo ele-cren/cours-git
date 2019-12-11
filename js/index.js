@@ -99,8 +99,8 @@ const displayMovies = () => {
       const card = document.createElement('div')
       card.className = 'card'
       const img = document.createElement('img')
-      img.src = 'https://image.tmdb.org/t/p/original' + movie.poster_path !== 'N/A' ? 'https://image.tmdb.org/t/p/original' + movie.poster_path : 'http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png'
-      img.alt = 'https://image.tmdb.org/t/p/original' + movie.poster_path !== 'N/A' ? 'https://image.tmdb.org/t/p/original' + movie.poster_path : 'http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png'
+      img.src = 'https://image.tmdb.org/t/p/original' + movie.poster_path
+      img.alt = 'https://image.tmdb.org/t/p/original' + movie.poster_path
       img.className = 'card-img-top'
       const cardBody = document.createElement('div')
       cardBody.className = 'card-body'
