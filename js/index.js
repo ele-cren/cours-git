@@ -111,16 +111,11 @@ const displayMovies = () => {
       detailsBtn.innerText = 'More infos'
       console.log(movie)
       detailsBtn.onclick = function () {
-        window.localStorage.setItem('movieTitle', movie.Title)
-        window.localStorage.setItem('moviePoster', movie.Poster)
-        window.localStorage.setItem('movieYear', movie.Year)
-        window.localStorage.setItem('movieRuntime', movie.Runtime)
-        window.localStorage.setItem('movieGenre', movie.Genre)
-        window.localStorage.setItem('movieCountry', movie.Country)
-        window.localStorage.setItem('movieDirector', movie.Director)
-        window.localStorage.setItem('movieActors', movie.Actors)
-        window.localStorage.setItem('movieLanguage', movie.Language)
-        window.localStorage.setItem('moviePlot', movie.Plot)
+        window.localStorage.setItem('movieTitle', movie.title)
+        window.localStorage.setItem('moviePoster', 'https://image.tmdb.org/t/p/original' + movie.poster_path)
+        window.localStorage.setItem('movieAdult', movie.Adult)
+        window.localStorage.setItem('movieLanguage', movie.original_language)
+        window.localStorage.setItem('moviePlot', movie.overview)
       }
       detailsBtn.className = 'card-btn'
 
