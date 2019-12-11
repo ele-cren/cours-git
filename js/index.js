@@ -73,9 +73,9 @@ const createBtn = (content, className) => {
 
 const searchMovies = () => {
   if (webWorker) {
-    const searchInput = document.getElementById('search').trim()
-    pages.currentPage = currentSearch !== searchInput.value ? 1 : pages.currentPage
-    currentSearch = searchInput ? searchInput.value : currentSearch
+    const searchInput = document.getElementById('search')
+    pages.currentPage = currentSearch !== searchInput.value.trim() ? 1 : pages.currentPage
+    currentSearch = searchInput ? searchInput.value.trim() : currentSearch
     const oldType = type
     type = currentSearch ? 'search' : 'top'
     if ((type !== oldType) || type === 'search') {
