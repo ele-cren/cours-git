@@ -114,8 +114,10 @@ const displayMovies = () => {
       detailsBtn.innerText = 'More infos'
       detailsBtn.onclick = function () {
         window.localStorage.setItem('movieTitle', movie.title)
-        window.localStorage.setItem('moviePoster', 'https://image.tmdb.org/t/p/original' + movie.poster_path)
-        window.localStorage.setItem('movieAdult', movie.Adult)
+        window.localStorage.setItem('moviePoster', 'https://image.tmdb.org/t/p/w300' + movie.poster_path)
+        window.localStorage.setItem('movieAdult', movie.adult)
+        window.localStorage.setItem('movieYear', movie.release_date)
+        console.log(movie.release_date)
         window.localStorage.setItem('movieLanguage', movie.original_language)
         window.localStorage.setItem('moviePlot', movie.overview)
       }
