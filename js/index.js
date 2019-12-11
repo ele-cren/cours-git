@@ -17,11 +17,10 @@ document.getElementById('search-form').addEventListener('submit', (e) => {
 })
 
 if (window.Worker) {
-  webWorker = new window.Worker('./js/worker.js') // WARNING : path to change
+  webWorker = new window.Worker('./js/worker.js')
   webWorker.onmessage = (event) => {
-    movies = type === 'top' ? event.data.movies : event.data.movies.Search
-    const totalResults = event.data.movies.totalResults
-    pages.maxPage = totalResults ? Math.ceil(totalResults / 10) : 1
+    movies = event.data.movies.results
+    pages.maxPage = event.data.movies.total_pages
     displayMovies()
     if (pages.maxPage > 1) {
       displayPagesBtns()
@@ -58,7 +57,11 @@ const displayPagesBtns = () => {
 
 const setPage = (page) => {
   pages.currentPage = parseInt(page)
-  searchMovies()
+  if (type === 'search') {
+    searchMovies()
+  } else {
+    getTopMovies()
+  }
 }
 
 const createBtn = (content, className) => {
@@ -83,7 +86,7 @@ const searchMovies = () => {
 
 const getTopMovies = () => {
   if (webWorker) {
-    webWorker.postMessage({ type: type })
+    webWorker.postMessage({ type: type, page: pages.currentPage })
   }
 }
 
@@ -96,31 +99,27 @@ const displayMovies = () => {
       const card = document.createElement('div')
       card.className = 'card'
       const img = document.createElement('img')
-      img.src = movie.Poster !== 'N/A' ? movie.Poster : 'http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png'
-      img.alt = movie.Poster !== 'N/A' ? movie.Poster : 'http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png'
+      img.src = 'https://image.tmdb.org/t/p/original' + movie.poster_path
+      img.alt = 'https://image.tmdb.org/t/p/original' + movie.poster_path
       img.className = 'card-img-top'
       const cardBody = document.createElement('div')
       cardBody.className = 'card-body'
       const title = document.createElement('h5')
-      title.innerText = movie.Title
-      title.title = movie.Title
+      title.innerText = movie.title
+      title.title = movie.title
       title.className = 'card-title'
       const detailsLink = document.createElement('a')
       detailsLink.href = './details.html'
       const detailsBtn = document.createElement('button')
       detailsBtn.innerText = 'More infos'
-      console.log(movie)
       detailsBtn.onclick = function () {
-        window.localStorage.setItem('movieTitle', movie.Title)
-        window.localStorage.setItem('moviePoster', movie.Poster)
-        window.localStorage.setItem('movieYear', movie.Year)
-        window.localStorage.setItem('movieRuntime', movie.Runtime)
-        window.localStorage.setItem('movieGenre', movie.Genre)
-        window.localStorage.setItem('movieCountry', movie.Country)
-        window.localStorage.setItem('movieDirector', movie.Director)
-        window.localStorage.setItem('movieActors', movie.Actors)
-        window.localStorage.setItem('movieLanguage', movie.Language)
-        window.localStorage.setItem('moviePlot', movie.Plot)
+        window.localStorage.setItem('movieTitle', movie.title)
+        window.localStorage.setItem('moviePoster', 'https://image.tmdb.org/t/p/w300' + movie.poster_path)
+        window.localStorage.setItem('movieAdult', movie.adult)
+        window.localStorage.setItem('movieYear', movie.release_date)
+        console.log(movie.release_date)
+        window.localStorage.setItem('movieLanguage', movie.original_language)
+        window.localStorage.setItem('moviePlot', movie.overview)
       }
       detailsBtn.className = 'card-btn'
 

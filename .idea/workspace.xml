@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b3334825-7020-49e5-897e-09461e286cbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+>>>>>>> 62566a8289e0cf4d50bfb2dfee4b47215aea80f4
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,20 +58,29 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+=======
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/node_modules/standard" />
+>>>>>>> 62566a8289e0cf4d50bfb2dfee4b47215aea80f4
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -82,7 +95,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575533339889</updated>
       <workItem from="1575533348692" duration="335000" />
+<<<<<<< HEAD
+      <workItem from="1575559836088" duration="943000" />
+      <workItem from="1576002469718" duration="1039000" />
+=======
       <workItem from="1575543651619" duration="12547000" />
+>>>>>>> 62566a8289e0cf4d50bfb2dfee4b47215aea80f4
     </task>
     <task id="LOCAL-00001" summary="presence matin dilys">
       <created>1575533479009</created>
@@ -103,6 +121,19 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="presence matin dilys" />
