@@ -1,23 +1,11 @@
 /* eslint-env worker */
-const URL = 'http://www.omdbapi.com/'
-const API_KEY = 'da057664'
+const URL = 'https://api.themoviedb.org/3/'
+const API_KEY = '967d5bd6ff00ae4d796d69af5cc03155'
 
-const baseMovies = [
-  'The Shawshank Redemption',
-  'The Godfather',
-  'The Dark Knight',
-  '12 Angry Men',
-  'The Lord of the Rings: The Return of the King',
-  'Pulp Fiction',
-  'The Good, the Bad and the Ugly',
-  'Fight Club',
-  'The Lord of the Rings: The Fellowship of the Ring',
-  'Forrest Gump'
-]
 
 onmessage = (event) => {
   if (event.data.type === 'top') {
-    getTopRatedMovies()
+    getTopRatedMovies(event.data.page)
   } else if (event.data.type === 'search') {
     searchMovies(event.data.search, event.data.page)
   }
@@ -25,18 +13,18 @@ onmessage = (event) => {
 
 const searchMovies = async (search, page) => {
   let movies = []
-  const response = await fetch(URL + '?apikey=' + API_KEY + '&s=' + search + '&page=' + page)
+  // https://api.themoviedb.org/3/search/movie?api_key=API_KEY%20%3A%20967d5bd6ff00ae4d796d69af5cc03155&query=Star%20Wars&page=1&include_adult=false
+  const response = await fetch(URL + 'search/movie?api_key=' + API_KEY + '&query=' + search + '&page=' + page + '&include_adult=false')
   const data = await response.json()
   movies = [...movies, data]
   postMessage({ movies: movies[0] })
 }
 
-const getTopRatedMovies = async () => {
+const getTopRatedMovies = async (page) => {
   let movies = []
-  for (let i = 0; i < baseMovies.length; i++) {
-    const response = await fetch(URL + '?apikey=' + API_KEY + '&t=' + baseMovies[i])
-    const data = await response.json()
-    movies = [...movies, data]
-  }
-  postMessage({ movies: movies })
+  // https://api.themoviedb.org/3/movie/top_rated?api_key=967d5bd6ff00ae4d796d69af5cc03155&page=1
+  const response = await fetch(URL + 'movie/top_rated?api_key=' + API_KEY + '&page=' + page)
+  const data = await response.json()
+  movies = [...movies, data]
+  postMessage({ movies: movies[0] })
 }
