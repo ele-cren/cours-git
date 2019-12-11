@@ -5,7 +5,7 @@ const API_KEY = 'da057664'
 const baseMovies = [
   'The Shawshank Redemption',
   'The Godfather',
-  'The Dark Knight ',
+  'The Dark Knight',
   '12 Angry Men',
   'The Lord of the Rings: The Return of the King',
   'Pulp Fiction',
