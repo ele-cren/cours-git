@@ -2,32 +2,10 @@
 const URL = 'https://api.themoviedb.org/3/'
 const API_KEY = '967d5bd6ff00ae4d796d69af5cc03155'
 
-const baseMovies = [
-  '278',
-  '238',
-  '155',
-  '389',
-  '122',
-  '680',
-  '429',
-  '550',
-  '120',
-  '13',
-  '27205',
-  '1891',
-  '121',
-  '603',
-  '769',
-  '510',
-  '475557',
-  '807',
-  '637',
-  '330457'
-]
 
 onmessage = (event) => {
   if (event.data.type === 'top') {
-    getTopRatedMovies()
+    getTopRatedMovies(event.data.page)
   } else if (event.data.type === 'search') {
     searchMovies(event.data.search, event.data.page)
   }
@@ -42,13 +20,11 @@ const searchMovies = async (search, page) => {
   postMessage({ movies: movies[0] })
 }
 
-const getTopRatedMovies = async () => {
+const getTopRatedMovies = async (page) => {
   let movies = []
-  // https://api.themoviedb.org/3/movie/278?api_key=967d5bd6ff00ae4d796d69af5cc03155
-  for (let i = 0; i < baseMovies.length; i++) {
-    const response = await fetch(URL + 'movie/' + baseMovies[i] + '?api_key=' + API_KEY)
-    const data = await response.json()
-    movies = [...movies, data]
-  }
-  postMessage({ movies: movies })
+  // https://api.themoviedb.org/3/movie/top_rated?api_key=967d5bd6ff00ae4d796d69af5cc03155&page=1
+  const response = await fetch(URL + 'movie/top_rated?api_key=' + API_KEY + '&page=' + page)
+  const data = await response.json()
+  movies = [...movies, data]
+  postMessage({ movies: movies[0] })
 }

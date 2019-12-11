@@ -19,7 +19,7 @@ document.getElementById('search-form').addEventListener('submit', (e) => {
 if (window.Worker) {
   webWorker = new window.Worker('./js/worker.js')
   webWorker.onmessage = (event) => {
-    movies = type === 'top' ? event.data.movies : event.data.movies.results
+    movies = event.data.movies.results
     pages.maxPage = event.data.movies.total_pages
     displayMovies()
     if (pages.maxPage > 1) {
@@ -57,11 +57,15 @@ const displayPagesBtns = () => {
 
 const setPage = (page) => {
   pages.currentPage = parseInt(page)
-  searchMovies()
+  if (type === 'search') {
+    searchMovies()
+  } else {
+    getTopMovies()
+  }
 }
 
 const createBtn = (content, className) => {
-  const currentBtn = document.createElement('button')
+  const currentBtn = document.createElement('div')
   currentBtn.className = className
   currentBtn.textContent = content
   return currentBtn
@@ -82,7 +86,7 @@ const searchMovies = () => {
 
 const getTopMovies = () => {
   if (webWorker) {
-    webWorker.postMessage({ type: type })
+    webWorker.postMessage({ type: type, page: pages.currentPage })
   }
 }
 
