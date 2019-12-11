@@ -19,7 +19,7 @@ document.getElementById('search-form').addEventListener('submit', (e) => {
 if (window.Worker) {
   webWorker = new window.Worker('./js/worker.js') // WARNING : path to change
   webWorker.onmessage = (event) => {
-    movies = type === 'top' ? event.data.movies : event.data.movies.Search
+    movies = type === 'top' ? event.data.movies : event.data.movies.results
     const totalResults = event.data.movies.totalResults
     pages.maxPage = totalResults ? Math.ceil(totalResults / 10) : 1
     displayMovies()
