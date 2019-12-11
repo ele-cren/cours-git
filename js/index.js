@@ -99,8 +99,8 @@ const displayMovies = () => {
       const card = document.createElement('div')
       card.className = 'card'
       const img = document.createElement('img')
-      img.src = 'https://image.tmdb.org/t/p/original' + movie.poster_path
-      img.alt = 'https://image.tmdb.org/t/p/original' + movie.poster_path
+      img.src = movie.poster_path ? 'https://image.tmdb.org/t/p/original' + movie.poster_path : 'http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png'
+      img.alt = movie.poster_path ? 'https://image.tmdb.org/t/p/original' + movie.poster_path : 'http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png'
       img.className = 'card-img-top'
       const cardBody = document.createElement('div')
       cardBody.className = 'card-body'
@@ -114,7 +114,7 @@ const displayMovies = () => {
       detailsBtn.innerText = 'More infos'
       detailsBtn.onclick = function () {
         window.localStorage.setItem('movieTitle', movie.title)
-        window.localStorage.setItem('moviePoster', 'https://image.tmdb.org/t/p/w300' + movie.poster_path)
+        window.localStorage.setItem('moviePoster', (movie.poster_path ? 'https://image.tmdb.org/t/p/w300' + movie.poster_path : 'http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png'))
         window.localStorage.setItem('movieAdult', movie.adult)
         window.localStorage.setItem('movieYear', movie.release_date)
         console.log(movie.release_date)
