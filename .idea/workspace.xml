@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3334825-7020-49e5-897e-09461e286cbf" name="Default Changelist" comment="presence matin dilys">
+    <list default="true" id="b3334825-7020-49e5-897e-09461e286cbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+>>>>>>> 62566a8289e0cf4d50bfb2dfee4b47215aea80f4
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +22,28 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -26,15 +55,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+=======
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/node_modules/standard" />
+>>>>>>> 62566a8289e0cf4d50bfb2dfee4b47215aea80f4
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
@@ -60,8 +95,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575533339889</updated>
       <workItem from="1575533348692" duration="335000" />
+<<<<<<< HEAD
       <workItem from="1575559836088" duration="943000" />
       <workItem from="1576002469718" duration="1039000" />
+=======
+      <workItem from="1575543651619" duration="12547000" />
+>>>>>>> 62566a8289e0cf4d50bfb2dfee4b47215aea80f4
     </task>
     <task id="LOCAL-00001" summary="presence matin dilys">
       <created>1575533479009</created>
@@ -70,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575533479009</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="send movie object">
+      <created>1575554767434</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575554767434</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,29 +137,54 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="presence matin dilys" />
-    <option name="LAST_COMMIT_MESSAGE" value="presence matin dilys" />
+    <MESSAGE value="send movie object" />
+    <option name="LAST_COMMIT_MESSAGE" value="send movie object" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1575533702728">
+    <state x="432" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575560577909">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575533702728" />
+    <state x="432" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1575560577909" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1575560450979">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575560450979" />
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1575543795220">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575543795220" />
+    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1575543795219">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1575543795219" />
+    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1575543795219">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1575543795219" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1575543795219">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575543795219" />
     <state x="129" y="53" key="MergeDialog" timestamp="1575533666382">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="53" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575533666382" />
-    <state x="395" y="78" key="MultipleFileMergeDialog" timestamp="1575533666397">
+    <state x="395" y="78" key="MultipleFileMergeDialog" timestamp="1575560515753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="395" y="78" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575533666397" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1575533488340">
+    <state x="395" y="78" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575560515753" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1575560538811">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1575533488340" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1575560538811" />
     <state x="471" y="154" key="git4idea.merge.GitMergeDialog" timestamp="1575533622892">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="471" y="154" key="git4idea.merge.GitMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575533622892" />
+    <state x="413" y="154" key="git4idea.merge.GitPullDialog" timestamp="1575560503836">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="154" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1575560503836" />
     <state x="480" y="257" key="git4idea.ui.GitResetDialog" timestamp="1575533608108">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
