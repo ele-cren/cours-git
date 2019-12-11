@@ -2,7 +2,6 @@
 const URL = 'https://api.themoviedb.org/3/'
 const API_KEY = '967d5bd6ff00ae4d796d69af5cc03155'
 
-
 onmessage = (event) => {
   if (event.data.type === 'top') {
     getTopRatedMovies(event.data.page)

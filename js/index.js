@@ -73,7 +73,7 @@ const createBtn = (content, className) => {
 
 const searchMovies = () => {
   if (webWorker) {
-    const searchInput = document.getElementById('search')
+    const searchInput = document.getElementById('search').trim()
     pages.currentPage = currentSearch !== searchInput.value ? 1 : pages.currentPage
     currentSearch = searchInput ? searchInput.value : currentSearch
     const oldType = type
@@ -117,7 +117,6 @@ const displayMovies = () => {
         window.localStorage.setItem('moviePoster', (movie.poster_path ? 'https://image.tmdb.org/t/p/w300' + movie.poster_path : 'http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png'))
         window.localStorage.setItem('movieAdult', movie.adult)
         window.localStorage.setItem('movieYear', movie.release_date)
-        console.log(movie.release_date)
         window.localStorage.setItem('movieLanguage', movie.original_language)
         window.localStorage.setItem('moviePlot', movie.overview)
       }
