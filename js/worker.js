@@ -1,6 +1,6 @@
 /* eslint-env worker */
-const URL = 'http://www.omdbapi.com/'
-const API_KEY = 'da057664'
+const URL = 'https://developers.themoviedb.org/3/getting-started'
+const API_KEY = '967d5bd6ff00ae4d796d69af5cc03155'
 
 const baseMovies = [
   'The Shawshank Redemption',
